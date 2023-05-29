@@ -31,7 +31,7 @@
 <img src="path/to/your/app-architecture-image.png" alt="Application Architecture">
 
 <h2>System Demo:</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+<p>Click <a href="https://www.youtube.com/watch?v=your-video-id">here</a> to watch the system demo.</p>
 
 <p>For detailed instructions on how to use the system, please refer to the documentation provided in the repository.</p>
 
