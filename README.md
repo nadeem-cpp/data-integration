@@ -27,3 +27,11 @@
 
 <p>For detailed instructions on how to use the system, please refer to the documentation provided in the repository.</p>
 
+<h2>Application Architecture:</h2>
+<img src="path/to/your/app-architecture-image.png" alt="Application Architecture">
+
+<h2>System Demo:</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+
+<p>For detailed instructions on how to use the system, please refer to the documentation provided in the repository.</p>
+
