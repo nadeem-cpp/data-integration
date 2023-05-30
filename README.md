@@ -1,6 +1,5 @@
 <h1 align="center">In Progess</h1>
 <h1><i>Integrating data from differnt sources into a single data warehouse</i></h1>
-<br>
 
 <h1 align="center">Overview</h1>
 <h1>Data Integration</h1>
