@@ -28,7 +28,8 @@
 <img src="path/to/your/app-architecture-image.png" alt="Application Architecture">
 <p>coming soon</p>
 
-<h2>System Demo:</h2>
+<h2 aligh="center">System Demo:</h2>
+<h3><b>MVP</b></h3>
 <p>Click <a href="https://www.youtube.com/watch?v=your-video-id">here</a> to watch the system demo.</p>
 <p>coming soon</p>
 
