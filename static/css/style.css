@@ -1,0 +1,25 @@
+.container {
+      max-width: 400px;
+      margin: 50px auto;
+      text-align: center;
+}
+.upload-btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+}
+
+.upload-btn:hover {
+      background-color: #45a049;
+}
+
+.file-input {
+      display: none;
+}
+
+.file-list {
+      margin-top: 20px;
+      text-align: left;
+}
