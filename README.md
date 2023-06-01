@@ -25,7 +25,7 @@
 <p>By leveraging this data integration and processing system, users can effortlessly integrate and process data from multiple sources, enabling them to gain valuable insights and make informed decisions. The intuitive user interface and powerful features make it a reliable and efficient solution for managing complex data integration tasks.</p>
 
 <h2 align="center">Deployment Architecture</h2>
-<img src="path/to/your/app-architecture-image.png" alt="Application Architecture">
+<img src="/solution-arch.png" alt="Application Architecture">
 <p>coming soon</p>
 
 <h2 align="center">System Demo:</h2>
