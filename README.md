@@ -1,2 +1,2 @@
 # data-integration
-<h1>In Progress</h1>
+<h1 align="center">In Progess</h1>
