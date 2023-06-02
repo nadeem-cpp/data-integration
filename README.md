@@ -29,6 +29,7 @@
 
 <h2 align="center">System Demo:</h2>
 <h3><b>MVP</b></h3>
+<p> The 1st iteration only accept csv type </p>
 <p>Click <a href="https://www.youtube.com/watch?v=your-video-id">here</a> to watch the system demo.</p>
 <p>coming soon</p>
 
