@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+{% include 'header.html' %}
 <body>
-<div class="container">
-       <h1>Data Upload</h1>
-    <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
-      <input type="file" name="files" id="file-input"
-             accept=".csv, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-             multiple>
-      <button type="submit" class="upload-btn">Upload Files</button>
+{% include "navigation.html" %}
+<div class="container text-center">
+    <h1 class="text-primary">Data Upload</h1>
+
+    <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <input class="form-control" type="file" accept=".csv" multiple>
+        </div>
+
+        <div class="input-group flex-nowrap " >
+            <span class="input-group-text"> Separator: </span>
+            <input type="text"  class="form-control" placeholder="leave blank if it is a ' , '" >
+        </div>
+        <br>
+      <button type="submit" class="btn btn-success btn-lg">Upload Files</button>
     </form>
   </div>
+
+{% include "footer.html" %}
 </body>
 </html>
+{#accept=".csv, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"#}
+

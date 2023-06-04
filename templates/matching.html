@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "header.html" %}
+<body>
+{% include "navigation.html" %}
+<div class="container ">
+    <h1 class="text-center text-success">Data Matching</h1>
+    <p class="text-center">These columns are going to get merged</p>
+    <table class="table table-dark table-hover">
+        <tbody>
+        {% for columns in titles %}
+        <tr>
+            <td>
+                {{ columns[0] }}
+            </td>
+            <td></td>
+            <td>
+                ------------->
+            </td>
+            <td></td>
+            <td>
+                {{ columns[1] }}
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+<div class="d-grid gap-2">
+    <button type="submit" class="btn btn-block btn-success ">Start Merging</button>
+</div>
+</div>
+</body>
+</html>
