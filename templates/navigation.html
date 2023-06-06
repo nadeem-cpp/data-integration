@@ -1,10 +1,14 @@
 <!-- Navigation-->
-<nav class="navbar bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand text-success" href="{{ url_for('home') }}">
+    <a class="navbar-brand  text-success" href="{{ url_for('home') }}">
 {#      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30"#}
 {#           height="24" class="d-inline-block align-text-top">#}
       Data integrator
     </a>
+{#      <a class="text-primary" href="{{ url_for('contact_us') }}"> Login </a>#}
+{##}
+{#      <a class="text-primary" href="{{ url_for('contact_us') }}"> Sign Up </a>#}
+      <a class="navbar-brand text-primary" href="{{ url_for('contact_us') }}"> Contact Us </a>
   </div>
 </nav>

@@ -6,20 +6,38 @@
 <div class="container ">
     <h1 class="text-center text-success">Data Matching</h1>
     <p class="text-center">These columns are going to get merged</p>
+    {% for columns in titles %}
+        {% set keys, col = columns.items() %}
+
     <table class="table table-dark table-hover">
+        <thead>
+        <th>
+            {{ keys[0] }}
+        </th>
+        <th>
+                ------------->
+        </th>
+        <th>
+                {{ col[0] }}
+
+        </th>
+        </thead>
         <tbody>
-        {% for columns in titles %}
+{#        list of dictioneries #}
         <tr>
             <td>
-                {{ columns[0] }}
+            {{ keys[1] }}
+
             </td>
-            <td></td>
+{#            #}
+{#            <td>#}
+{#                {{ columns[0] }}#}
+{#            </td>#}
             <td>
                 ------------->
             </td>
-            <td></td>
             <td>
-                {{ columns[1] }}
+                {{ col[1] }}
             </td>
         </tr>
         {% endfor %}

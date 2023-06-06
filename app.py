@@ -8,15 +8,17 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/upload", methods=["POST"])
+@app.route("/upload", methods=["POST", "GET"])
 def upload():
     # TODO 1 get files from form and send it to Data Handler object
     files = request.files.getlist("files")
+    sep = request.form["sep"]
     try:
 
         dh = DataHandler(data_files=files)
-        titles = dh.get_similar_titles()
-        return render_template("matching.html", titles=titles)
+        matched_columns = dh.get_similar_titles()
+        print(matched_columns)
+        return render_template("matching.html", titles=matched_columns)
 
     except Exception as e:
         print(e)
@@ -31,6 +33,19 @@ data = [('fruit', 'country'), ('brand', 'drink'), ('pet', 'Has Car'), ('Likes Pi
 @app.route("/matching")
 def matching():
     return render_template("matching.html", titles=data, enumerate=enumerate)
+
+
+@app.route("/contactus")
+def contact_us():
+    return render_template("contact.html")
+
+
+@app.route("/email", methods=["POST", "GET"])
+def email():
+    name = request.form["name"]
+    email = request.form["email"]
+    # send email from above email to system
+    return "<h1>Message submitted</h1>"
 
 
 if __name__ == '__main__':

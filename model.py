@@ -8,7 +8,9 @@ class DataHandler:
         self.__data_files = data_files
         self.__sep = separator
         self.__data_list = []
+        self.__file_names = []
         for data_file in data_files:
+            self.__file_names.append(data_file.filename)
             data = pd.read_csv(data_file, sep=self.__sep)
             self.__data_list.append(data)
 
@@ -25,11 +27,13 @@ class DataHandler:
             for j, name1 in enumerate(columns[0]):
                 for k, name2 in enumerate(columns[i]):
                     if name1 == name2:
-                        similar.append((name1, name2))
+                        similar.append({self.__file_names[0]:name1, self.__file_names[i]: name2})
+                        # similar.append((name1, name2))
                         main_remove.append(name1)
                         del columns[i][k]
                     elif name1 in name2:
-                        similar.append((name1, name2))
+                        similar.append({self.__file_names[0]:name1, self.__file_names[i]: name2})
+                        # similar.append((name1, name2))
                         main_remove.append(name1)
                         del columns[i][k]
 
@@ -37,10 +41,10 @@ class DataHandler:
         for name in main_remove:
             columns[0].remove(name)
 
-        columns_temp = self.__cosine_similarity(columns)
-
-        if len(columns_temp) is not 0:
-            similar.append(columns_temp)
+        # columns_temp = self.__cosine_similarity(columns)
+        #
+        # if len(columns_temp) is not 0:
+        #     similar.append(columns_temp)
 
         return similar
 

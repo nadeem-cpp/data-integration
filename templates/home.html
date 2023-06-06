@@ -4,16 +4,17 @@
 <body>
 {% include "navigation.html" %}
 <div class="container text-center">
-    <h1 class="text-primary">Data Upload</h1>
-
+    <h1 class="text-primary mb-4">Data Upload</h1>
+{#enctype="multipart/form-data"#}
     <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
-            <input class="form-control" type="file" accept=".csv" multiple>
+            <input class="form-control" type="file" accept=".csv"  name="files" multiple>
         </div>
 
-        <div class="input-group flex-nowrap " >
+        <div class="input-group" >
             <span class="input-group-text"> Separator: </span>
-            <input type="text"  class="form-control" placeholder="leave blank if it is a ' , '" >
+{#            <input type="text" name="sep">#}
+            <input type="text"  class="form-control" name="sep" placeholder="leave blank if it is a ' , '" >
         </div>
         <br>
       <button type="submit" class="btn btn-success btn-lg">Upload Files</button>
